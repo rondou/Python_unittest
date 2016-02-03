@@ -1,4 +1,5 @@
 import math
+import operator as op
 
     # write your code in Python 2.7
 # you can write to stdout for debugging purposes, e.g.
@@ -90,6 +91,56 @@ def sorteddd():
     print len(a)
     for i in a:
         print i
+
+def WSOE():
+    n = input()
+    r = map(int, raw_input().split())
+    r.sort()
+
+    print sum(r) if sum(r) % 2 == 0 else sum(r) - min(filter(lambda x:x&1, r) or [0])
+
+
+
+
+#for i, j in enumerate(r):
+#    if sum(r[i:]) % 2 == 0:
+#        print sum(r[i:])
+#        exit()
+
+#print "0"
+
+
+#V1 = [1,2,3,4,5]
+#V2 = [2,2,2,2,2]
+
+#xx = map(op.mul, V1,V2)
+#print xx
+
+#print math.factorial(42) / (math.factorial(6)*math.factorial(36) )
+
+#x = [tuple(map(int, raw_input().split())) for _ in range(input())]
+
+#count = 0
+#n = len(x)+1
+#for i in range(len(x)):
+#    n -= 1
+#    for j in xrange(1, n):
+#        count += 1 if abs(x[i][0] - x[i+j][0]) == abs(x[i][1] - x[i+j][1]) else 0
+
+#print count
+
+    #x[i][0] - x[i+1][0]
+    #x[i][1] - x[i+1][1]
+
+#for _ in range(n):
+#    ai, bi = map(int, raw_input().split())
+#    x.append((ai, bi))
+
+
+
+#print x[0][0] - x[1][0]
+
+#print x[0][1] - x[1][1]
 #while (s):
 #    print s
 
