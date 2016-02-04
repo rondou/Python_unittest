@@ -99,6 +99,16 @@ def WSOE():
 
     print sum(r) if sum(r) % 2 == 0 else sum(r) - min(filter(lambda x:x&1, r) or [0])
 
+def onelineTest():
+    a = []
+    for i in range(1,50):
+        a.append(pow(i,3))
+
+    print  reduce(lambda a,b: a+b, filter(lambda a: not(a&1), a)) - \
+           reduce(lambda a,b: a+b, filter(lambda a: a&1, a)) \
+           + 1
+
+
 
 
 
